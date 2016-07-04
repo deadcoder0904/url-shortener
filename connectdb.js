@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var mrl = require('./private').MONGODB_URI;
+var mrl = process.env.MONGODB_URI || require('./private').MONGODB_URI;
 
 mongoose.connect(mrl);
 var db = mongoose.connection ;
