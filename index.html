@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>URL SHORTENER</title>
+		<link rel="stylesheet" href="bootstrap.min.css"/>
+		
+	</head>
+	<body>
+		<div class="container-fluid text-center">
+			<h1 class="header">URL Shortener Microservice</h1>
+
+			<h3>Example creation usage:</h3>
+			
+			<code>POST https://url-shortener-0904.herokuapp.com/new?url=https://www.google.com</code>
+			<br/>
+			
+			<code>POST https://url-shortener-0904.herokuapp.com/new?url=http://foo.com:80</code>
+			
+			<h3>Example creation output</h3>
+			
+			<code>{
+			  "original_url":"http://foo.com:80",
+			  "short_url":"https://url-shortener-0904.herokuapp.com/1"
+			}
+			</code>
+			
+			<h3>Usage:</h3>
+			
+			<code>GET https://url-shortener-0904.herokuapp.com/2</code>
+			
+			<h3>Will redirect to:</h3>
+			
+			<code>https://www.google.com/</code>
+		</div>
+	</body>
+</html>
